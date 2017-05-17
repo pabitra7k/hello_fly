@@ -1,0 +1,134 @@
+.formsWrapperDiv {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 0px 8px 0px 8px;
+  font-family: sans-serif;
+
+  .formDiv {
+    padding: 21px 11px;
+    border: 1px solid #DFDEDE;
+    padding-left: 9px;
+
+    h3 {
+      padding-left: 12px;
+    }
+
+    label {
+      display : block;
+      font-size: 12px;
+      color: #222222;
+    }
+
+    input[type="text"] {
+      width: 200px;
+      height: 30px;
+      padding: 5px 8px 5px 8px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border: 1px solid #DFDEDE;
+      font-size: 12px;
+      color: #222222;
+    }
+
+    .header {
+      font-size: 31px;
+      font-weight: normal;
+      color: #e1163c;
+      line-height: 0px;
+    }
+
+    .para{
+      font-size: 14px;
+      color: #222222;
+      margin: 0 0 27px 10px;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+    }
+
+    legend {
+      width: 15%;
+      display: inline;
+      float: left;
+      position: relative;
+      color: #222222;
+
+      span {
+        float: right;
+        text-align: right;
+        margin-right: 17px;
+        font-size: 18px;
+        color: #222222;
+      }
+    }
+
+    .rightContent {
+      width: 84%;
+      display: inline;
+      float: left;
+      position: relative;
+
+      .title_type {
+        width: 138px;
+      }
+    }
+
+    .heightDetailsDiv {
+      height: 80px;
+    }
+
+    .nameDetailsDiv {
+      width: 238px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 12px;
+      margin-top: 12px;
+    }
+
+    .form label {
+      font-size: 12px;
+      color: #222222;
+    }
+    select.selectBox {
+      height: 43px;
+      width: 140px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #C0C0C0;
+      border-radius: 2px;
+      font-size: 11px;
+      color: #222222;
+      padding-left: 10px;
+      padding-top: 0px;
+      background: -webkit-linear-gradient(top, #ffffff, rgba(97, 18, 107, 0.1));
+      /*background: -ms-linear-gradient(top, #ffffff, rgba(97, 18, 107, 0.1));
+      background: -moz-linear-gradient(top, #ffffff, rgba(97, 18, 107, 0.1));*/
+    }
+  }
+
+  .formDiv:first-child {
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  .buttonSend {
+    padding: 16px 25px;
+    font-family: gotham-light;
+    font-size: 17px;
+    color: #ffffff;
+    background: -webkit-linear-gradient(left top, #e1163c, #A11453);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+
+}
+@media only screen and (max-width: 1200px) {
+  .formsWrapperDiv {
+    width: 1008px;
+  }
+}

@@ -1,0 +1,60 @@
+<div class="formsWrapperDiv container_24 noDisplay" id="checkinServiceFormDiv">
+  <form #userForm="ngForm" (ngSubmit)="onSubmitForm(userForm.value, $event)" class="formDiv">
+      <h3 class="header">{{title}}</h3>
+      <p class="para">Please fill the checkin form for checkin.</p>
+      <div class='form' role="form" tabindex="-1">
+
+        <fieldset class='fileldsetFirst contactInfo' ngModelGroup="contactInfo">
+          <legend class=''><span>Contact info</span></legend>
+          <div class='rightContent'>
+            <div class="titleDiv">
+              <label for="title_type" id="titleLabel" class='displayBlk'>Title</label>
+              <select id="title_type" name="personTitle" ngModel class="title_type selectBox">
+                <option value="" style="display:none">Please select</option>
+                <option value="Mr">Mr</option><option value="Mrs">Mrs</option>
+                <option value="Ms">Ms</option><option value="Mstr">Mstr</option>
+                <option value="Miss">Miss</option><option value="Dr">Dr</option>
+                <option value="Rev">Rev</option>
+              </select>
+            </div>
+            <div class="heightNameDiv">
+              <div class="firstNameDiv nameDetailsDiv">
+                <label for="csFirstName">First name</label>
+                <input type="text" id="csFirstName" name="firstName" ngModel class="csInputBox nameInput" placeholder="First name..." aria-required="true" />
+              </div>
+              <div class="lastNameDiv nameDetailsDiv">
+                <label for="csLastName">Last name</label>
+                <input type="text" id="csLastName" name="lastName" ngModel class="csInputBox nameInput" placeholder="Last name..." aria-required="true"/>
+              </div>
+              <div class="displayInlineBlock">
+                <span class="valid validName"></span>
+              </div>
+            </div>
+            <label for='emailAdres' class='displayBlk'>Email address </label>
+            <input type="text" name="email" ngModel id="emailAdres" class="csInputBox" placeholder="Email address..." aria-required="true"/>
+          </div>
+        </fieldset>
+        <fieldset class='flightInfo' ngModelGroup="flight Info">
+          <legend class='grid_4 csLeft'><span>Flight information</span></legend>
+          <div class='rightContent'>
+              <div class='contactNumDiv'><label for="bookingNum">Booking reference number</label>
+                <input type="text" name="flyerNo" ngModel id="bookingNum" maxlength='11' class="csInputBox" placeholder="Booking reference number..." aria-required="true"/>
+              </div>
+              <div class='contactNumDiv'><label for="ticketNum">Ticket number</label>
+                <input type="text" name="flyerNo" ngModel id="ticketNum" maxlength='11' class="csInputBox" placeholder="Ticket number..." aria-required="true"/>
+              </div>
+          </div>
+        </fieldset>
+        <fieldset class='otherDetails' ngModelGroup="optionalDetails">
+          <legend class='grid_4 csLeft'><span>Other details (optional)</span></legend>
+          <div class='rightContent'>
+            <label for='loyalProg' class='displayBlk'>Loyalty programme</label>
+            <input type="text" name="loyalProg" id="loyalProg" class="csInputBox" placeholder="Loyalty programme..." aria-required="true"/>
+            <label for='flyerNo' class='displayBlk'>Frequently flyer number</label>
+            <input type="text" name="flyerNo" id="flyerNo" class="csInputBox" placeholder="Frequently flyer number..." aria-required="true"/>
+           </div>
+        </fieldset>
+      </div>
+    <button type="submit" class="buttonSend" id="csFormSubmit" data-attr="status">Send</button>
+  </form>
+</div>
