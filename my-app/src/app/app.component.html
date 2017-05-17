@@ -1,4 +1,4 @@
-<div class="formsWrapperDiv container_24 noDisplay" id="checkinServiceFormDiv">
+<div class="formsWrapperDiv" id="checkinServiceFormDiv">
   <form #userForm="ngForm" (ngSubmit)="onSubmitForm(userForm.value, $event)" class="formDiv">
       <h3 class="header">{{title}}</h3>
       <p class="para">Please fill the checkin form for checkin.</p>
@@ -20,7 +20,7 @@
             <div class="heightNameDiv">
               <div class="firstNameDiv nameDetailsDiv">
                 <label for="csFirstName">First name</label>
-                <input type="text" id="csFirstName" name="firstName" ngModel class="csInputBox nameInput" placeholder="First name..." aria-required="true" />
+                <input type="text" id="csFirstName" name="firstName" ngModel class="csInputBox nameInput" placeholder="First name..." aria-required="true" pattern="/[a-zA-Z0-9 \-']{2,25}$/"/>
               </div>
               <div class="lastNameDiv nameDetailsDiv">
                 <label for="csLastName">Last name</label>
@@ -31,7 +31,7 @@
               </div>
             </div>
             <label for='emailAdres' class='displayBlk'>Email address </label>
-            <input type="text" name="email" ngModel id="emailAdres" class="csInputBox" placeholder="Email address..." aria-required="true"/>
+            <input type="text" name="email" ngModel id="emailAdres" class="csInputBox" placeholder="Email address..." aria-required="true" pattern="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$"/>
           </div>
         </fieldset>
         <fieldset class='flightInfo' ngModelGroup="flight Info">
@@ -40,7 +40,7 @@
               <div class='contactNumDiv'><label for="bookingNum">Booking reference number</label>
                 <input type="text" name="flyerNo" ngModel id="bookingNum" maxlength='11' class="csInputBox" placeholder="Booking reference number..." aria-required="true"/>
               </div>
-              <div class='contactNumDiv'><label for="ticketNum">Ticket number</label>
+              <div class='contactNumDiv' minlength="2" maxlength="10"><label for="ticketNum">Ticket number</label>
                 <input type="text" name="flyerNo" ngModel id="ticketNum" maxlength='11' class="csInputBox" placeholder="Ticket number..." aria-required="true"/>
               </div>
           </div>
@@ -49,12 +49,16 @@
           <legend class='grid_4 csLeft'><span>Other details (optional)</span></legend>
           <div class='rightContent'>
             <label for='loyalProg' class='displayBlk'>Loyalty programme</label>
-            <input type="text" name="loyalProg" id="loyalProg" class="csInputBox" placeholder="Loyalty programme..." aria-required="true"/>
+            <input type="text" name="loyalProg" id="loyalProg" minlength="2" maxlength="10" class="csInputBox" placeholder="Loyalty programme..." aria-required="true"/>
             <label for='flyerNo' class='displayBlk'>Frequently flyer number</label>
-            <input type="text" name="flyerNo" id="flyerNo" class="csInputBox" placeholder="Frequently flyer number..." aria-required="true"/>
+            <input type="text" name="flyerNo" id="flyerNo" minlength="2" maxlength="10" class="csInputBox" placeholder="Frequently flyer number..." aria-required="true"/>
            </div>
         </fieldset>
       </div>
-    <button type="submit" class="buttonSend" id="csFormSubmit" data-attr="status">Send</button>
+    <button type="submit" class="buttonSend" id="csFormSubmit" data-attr="status">Submit</button>
   </form>
+  <nav>
+    <a routerLink="/checkin" routerLinkActive="active">CheckIn : Sample Routing1</a>
+    <a routerLink="/flightInfo" routerLinkActive="active">Flight Info : Sample Routing2</a>
+  </nav>
 </div>

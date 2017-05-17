@@ -78,7 +78,7 @@
       }
     }
 
-    .heightDetailsDiv {
+    .heightNameDiv {
       height: 80px;
     }
 
@@ -93,7 +93,9 @@
     .form label {
       font-size: 12px;
       color: #222222;
+      margin: 15px 0 8px 0;
     }
+
     select.selectBox {
       height: 43px;
       width: 140px;
@@ -117,7 +119,6 @@
 
   .buttonSend {
     padding: 16px 25px;
-    font-family: gotham-light;
     font-size: 17px;
     color: #ffffff;
     background: -webkit-linear-gradient(left top, #e1163c, #A11453);

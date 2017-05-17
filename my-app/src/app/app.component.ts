@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterOutlet} from '@angular/router'
 import {CheckinServiceService} from './checkin-service.service';
 
 @Component({
@@ -24,6 +25,7 @@ export class AppComponent {
       successRes => {
         this.checkinDetails = successRes;
         console.log('Successfully checked In');
+        alert ("You have successfully checked in!!");
       },
       errorRes => {
         console.log('Please try after some time!!' + errorRes);
